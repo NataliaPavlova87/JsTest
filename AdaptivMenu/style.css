@@ -1,0 +1,263 @@
+/* --------------- reset.css --------------- */
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,em,img,strong,sub,sup,b,u,i,dl,dt,
+dd,ol,ul,li,fieldset,form,label,table,tbody,tfoot,thead,tr,th,td,article,
+aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,
+section,summary,time,mark,audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* обнуляем отступы и убираем бордюры */
+    vertical-align: baseline;
+    /* приводим все к одной базовой линии */
+    background: transparent;
+    /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+    font-size: 100%;
+    /* размер шрифта всем одинаковый */
+}
+
+a {
+    /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    outline: none;
+}
+
+table {
+    /* устраняем отступы между ячейками таблицы */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+td img {
+    vertical-align: top;
+    /* возвращаем привычное вертикальное выравнивание */
+}
+
+input,
+select,
+button,
+textarea {
+    margin: 0;
+    /* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+    font-size: 100%;
+    /* делаем размер шрифтов везде одинаковым */
+    outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    /* убираем внутренние отступы для текстовых полей */
+}
+
+input[type="checkbox"] {
+    /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+    vertical-align: bottom;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+
+html {
+    min-height: 100%;
+    /* всегда показываем вертикальную полосу прокрутки  */
+}
+
+body {
+    font-family: ApercuPro;
+    color: #000;
+    text-align: left;
+    font-size: 1em;
+    /* используем безопасные шрифтовые CSS стеки */
+    min-height: 100%;
+}
+
+a,
+a:visited {
+    /* порядок правил для ссылок имеет значение */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus,
+a:active {
+
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+.clr {
+    clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+
+/* --------------- /базовые настройки ---------*/
+
+
+/* ------------прижатие footer к низу экрана--------- */
+html,
+body {
+    height: 100%;
+    background-color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------------------------------ */
+#burg {
+    width: 98%;
+    background-color: #232323;
+    padding: 8px 0 8px 2%;
+}
+
+#burg a{
+    display: block;
+    width: 70px;
+}
+
+span {
+    display: flex;
+    margin: 8px;
+    width: 30px;
+    height: 1px;
+    background-color: #C3C3C3;
+    z-index: 1000;
+}
+
+
+#desktop {
+    display: none;
+}
+
+.mobile-tab {
+    display: flex;
+    width: 100%;
+    background-color: #232323;
+    flex-direction: column;
+}
+
+.mobile-tab a {
+    font-size: 24px;
+    color: #C3C3C3;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.mobile-tab a li {
+    list-style: none;
+    margin: 5%;
+}
+
+.mobile-tab ul {
+    padding: 5% 0;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-tab, #burg, #mobile {
+        display: none;
+    }
+
+    .bar {
+        background-color: #232323;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .mobile-bar {
+        display: none;
+    }
+
+    #desktop {
+        display: flex;
+    }
+
+    a {
+        text-decoration: none;
+        color: #C3C3C3;
+        margin: 0;
+    }
+
+    ul {
+        display: inline-flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        color: #ffffff;
+        cursor: pointer;
+        font-weight: lighter;
+        background-color: #232323;
+        padding: 20px;
+        text-align: center;
+        letter-spacing: 1px;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+}
+
+    li:hover {
+        background: #ffffff;
+        opacity: 0.8;
+        box-shadow: inset 1px 1px 5px grey;
+    }
+
+    li a:hover {
+        color: #2B2B2B;
+    }
+} 
+
