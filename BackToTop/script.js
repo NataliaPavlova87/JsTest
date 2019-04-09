@@ -6,7 +6,7 @@ $(document).ready(function($){
         if ($(window).scrollTop() >= 20) {
             $btn.fadeIn();
         } else {
-            btn.fadeOut();
+            $btn.fadeOut();
         }
     });
 
